@@ -9,6 +9,9 @@ class App extends React.Component {
         {Data.map((item, index) => {
           return <List key={index} />;
         })}
+
+        <List />
+        <List />
       </div>
     );
   }
