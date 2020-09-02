@@ -9,7 +9,7 @@ const data = [
   },
   {
     name: "客户",
-    children: [{ name: `阿里` }, { name: `腾讯` }, { name: `头条` }],
+    children: [`阿里`, `腾讯`, `头条`],
   },
 ];
 

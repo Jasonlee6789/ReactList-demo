@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <div className="friend-list">
         {Data.map((item, index) => {
-          return <List key={index} itemData={item} />;
+          return <List key={index} Data={item} />;
         })}
       </div>
     );

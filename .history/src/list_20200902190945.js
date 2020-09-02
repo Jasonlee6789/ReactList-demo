@@ -10,7 +10,7 @@ export default class List extends React.Component {
         <dl className="friend-group expanded">
           <dt>{name}</dt>
           {children.map((item, index) => {
-            return <dd key={index}>{item.name}</dd>;
+            return <dd>爸爸</dd>;
           })}
         </dl>
       </div>
