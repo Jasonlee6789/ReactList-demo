@@ -7,21 +7,13 @@ export default class List extends React.Component {
 
   render() {
     let { show } = this.state;
-    console.log(this.state);
+    console.log(this.props);
     let { itemData } = this.props;
     let { name, children } = itemData;
     return (
       <div className="friend-list">
-        <dl className={`friend-group ${show ? "expanded " : ""}`}>
-          <dt
-            onClick={() => {
-              this.setState({
-                show: !show,
-              });
-            }}
-          >
-            {name}
-          </dt>
+        <dl className={show ? "friend-group expanded" : ""}>
+          <dt>{name}</dt>
           {children.map((item, index) => {
             return <dd key={index}>{item.name}</dd>;
           })}

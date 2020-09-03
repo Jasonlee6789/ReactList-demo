@@ -12,7 +12,7 @@ export default class List extends React.Component {
     let { name, children } = itemData;
     return (
       <div className="friend-list">
-        <dl className={`friend-group ${show ? "expanded " : ""}`}>
+        <dl className={show ? "friend-group expanded " : ""}>
           <dt
             onClick={() => {
               this.setState({

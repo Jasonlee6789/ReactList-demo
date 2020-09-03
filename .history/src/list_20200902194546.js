@@ -12,7 +12,7 @@ export default class List extends React.Component {
     let { name, children } = itemData;
     return (
       <div className="friend-list">
-        <dl className={`friend-group ${show ? "expanded " : ""}`}>
+        <dl className={show ? "friend-group expanded dd" : ""}>
           <dt
             onClick={() => {
               this.setState({
@@ -21,10 +21,17 @@ export default class List extends React.Component {
             }}
           >
             {name}
+            {children.map((item, index) => {
+              return (
+                <dd
+                  className={show ? "friend-group expanded dd" : ""}
+                  key={index}
+                >
+                  {item.name}
+                </dd>
+              );
+            })}
           </dt>
-          {children.map((item, index) => {
-            return <dd key={index}>{item.name}</dd>;
-          })}
         </dl>
       </div>
     );
