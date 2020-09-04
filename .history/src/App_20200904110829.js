@@ -9,11 +9,6 @@ class App extends React.Component {
     //如果没有展开细节，openName为空
   };
 
-  setOpenName = (openName) => {
-    this.setState({
-      openName,
-    });
-  };
   render() {
     console.log(Object.keys(datas));
     return (
@@ -24,7 +19,6 @@ class App extends React.Component {
               key={index}
               name={item}
               openName={this.state.openName}
-              setOpenName={this.setOpenName}
               itemData={datas[item]}
             />
           );

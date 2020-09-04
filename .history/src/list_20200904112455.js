@@ -9,7 +9,7 @@ export default class List extends React.Component {
     // let { show } = this.state;
     // console.log(this.state);
     console.log(this.props);
-    let { itemData, name, openName, setOpenName } = this.props;
+    let { itemData, name, openName } = this.props;
     // let { name, children } = itemData;
     let { title, list } = itemData;
 
@@ -22,7 +22,6 @@ export default class List extends React.Component {
               // this.setState({
               //   show: !show,
               // });
-              setOpenName(name === openName ? "" : name);
             }}
           >
             {title}

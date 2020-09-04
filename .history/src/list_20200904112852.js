@@ -22,7 +22,6 @@ export default class List extends React.Component {
               // this.setState({
               //   show: !show,
               // });
-              setOpenName(name === openName ? "" : name);
             }}
           >
             {title}

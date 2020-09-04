@@ -8,26 +8,22 @@ export default class List extends React.Component {
   render() {
     // let { show } = this.state;
     // console.log(this.state);
-    console.log(this.props);
-    let { itemData, name, openName, setOpenName } = this.props;
-    // let { name, children } = itemData;
-    let { title, list } = itemData;
-
+    let { itemData } = this.props;
+    let { name, children } = itemData;
     return (
       <div className="friend-list">
         {/* <dl className={`friend-group ${show ? "expanded " : ""}`}> */}
-        <dl className={`friend-group ${name === openName ? "expanded" : ""} `}>
+        <dl className={"friend-group expanded "}>
           <dt
             onClick={() => {
               // this.setState({
               //   show: !show,
               // });
-              setOpenName(name === openName ? "" : name);
             }}
           >
-            {title}
+            {name}
           </dt>
-          {list.map((item, index) => {
+          {children.map((item, index) => {
             return <dd key={index}>{item.name}</dd>;
           })}
         </dl>

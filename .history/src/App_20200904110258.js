@@ -1,31 +1,25 @@
 import React from "react";
 import List from "./list";
-// import Data from "./data";
+import Data from "./data";
 import datas from "./data";
 
 class App extends React.Component {
   state = {
-    openName: "family", //Save state from decide which itemList to expand
+    openName: "", //Save state from decide which itemList to expand
     //如果没有展开细节，openName为空
   };
 
-  setOpenName = (openName) => {
-    this.setState({
-      openName,
-    });
-  };
   render() {
-    console.log(Object.keys(datas));
+    console.log(Object.keys(Data));
     return (
       <div className="friend-list">
-        {Object.keys(datas).map((item, index) => {
+        {Data.map((item, index) => {
           return (
             <List
               key={index}
               name={item}
               openName={this.state.openName}
-              setOpenName={this.setOpenName}
-              itemData={datas[item]}
+              itemData={item}
             />
           );
         })}

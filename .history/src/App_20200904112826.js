@@ -24,7 +24,6 @@ class App extends React.Component {
               key={index}
               name={item}
               openName={this.state.openName}
-              setOpenName={this.setOpenName}
               itemData={datas[item]}
             />
           );

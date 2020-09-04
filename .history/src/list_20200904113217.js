@@ -19,12 +19,11 @@ export default class List extends React.Component {
         <dl className={`friend-group ${name === openName ? "expanded" : ""} `}>
           <dt
             onClick={() => {
-              // this.setState({
-              //   show: !show,
-              // });
-              setOpenName(name === openName ? "" : name);
+              setOpenName(name);
             }}
-          >
+          >              // this.setState({
+            //   show: !show,
+            // });
             {title}
           </dt>
           {list.map((item, index) => {

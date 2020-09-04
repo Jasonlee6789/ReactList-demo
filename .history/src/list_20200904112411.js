@@ -9,10 +9,8 @@ export default class List extends React.Component {
     // let { show } = this.state;
     // console.log(this.state);
     console.log(this.props);
-    let { itemData, name, openName, setOpenName } = this.props;
-    // let { name, children } = itemData;
+    let { itemData, name, openName } = this.props;
     let { title, list } = itemData;
-
     return (
       <div className="friend-list">
         {/* <dl className={`friend-group ${show ? "expanded " : ""}`}> */}
@@ -22,7 +20,6 @@ export default class List extends React.Component {
               // this.setState({
               //   show: !show,
               // });
-              setOpenName(name === openName ? "" : name);
             }}
           >
             {title}
